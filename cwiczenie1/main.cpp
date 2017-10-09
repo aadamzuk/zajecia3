@@ -28,6 +28,17 @@ vector <probka> wczytaj (string nazwa)
     plik.close();
     return tab;
 }
+void zapis (vector <probka> dane,string nazwa)
+{
+    ofstream zapisanie("nazwa.txt");
+    for(int i=0;i<400;i++)
+    {
+
+    zapisanie<<dane[i].t<<endl;
+    }
+
+
+}
 //vector <probka> tablica;
 //tablica push_back(p1);
 //cout<<tablica[0];
@@ -38,7 +49,7 @@ int main(int argc, char* argv[])
 }
 string nazwa_pliku = argv[1];
 vector<probka>dane=wczytaj(argv[1]);
-//cout << nazwa_pliku << endl;
 cin.get();
+
 return 0;
 }
